@@ -1,7 +1,9 @@
 import React from 'react';
-import { TouchableOpacity, StyleSheet, TextInput, Button, View, Platform } from 'react-native';
+import { TouchableOpacity, StyleSheet, TextInput, View, Platform, Image } from 'react-native';
 import PropTypes from 'prop-types';
-import Icon from "react-native-fontawesome-pro";
+
+const defaultImageAdd = require('./assets/add.png');
+const defaultImageRemove = require('./assets/remove.png');
 
 class MultipleTextInput extends React.Component {
 
@@ -144,24 +146,20 @@ class MultipleTextInput extends React.Component {
     };
 };
 
-getDefaultAddIcon = () => {
+const getDefaultAddIcon = () => {
     return (
-        <Icon
-            name='plus'
-            color='white'
-            type='regular'
-            size={15}
+        <Image
+            style={styles.imageAction}
+            source={defaultImageAdd}
         />
     );
 }
 
-getDefaultRemoveIcon = () => {
+const getDefaultRemoveIcon = () => {
     return (
-        <Icon
-            name='times'
-            color='white'
-            type='regular'
-            size={15}
+        <Image
+            style={styles.imageAction}
+            source={defaultImageRemove}
         />
     );
 }
@@ -218,5 +216,9 @@ const styles = StyleSheet.create({
     },
     inputStyle: {
         flex: 1
+    },
+    imageAction: {
+        height: 25,
+        width: 25,
     }
 });

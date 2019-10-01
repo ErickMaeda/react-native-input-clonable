@@ -10,3 +10,6 @@ tmp
 
 # Examples (If applicable to your project)
 examples
+
+# Mac Files
+.DS_Store

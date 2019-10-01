@@ -1,0 +1,35 @@
+{
+  "name": "react-native-input-clonable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErickMaeda/react-native-input-clonable.git"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "input",
+    "clone",
+    "input",
+    "clone",
+    "multiple",
+    "input"
+  ],
+  "author": "Erick Maeda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErickMaeda/react-native-input-clonable/issues"
+  },
+  "homepage": "https://github.com/ErickMaeda/react-native-input-clonable#readme",
+  "devDependencies": {
+    "prop-types": "^15.7.2"
+  }
+}

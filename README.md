@@ -34,16 +34,19 @@ import MultipleTextInput from 'react-native-input-clonable';
 Props
 
 ---
-|prop|type|default|obs
+|prop|type|default|obs|
 | --- | --- | --- | --- |
-autoCapitalize|string|none|---
-textInputPlaceholder|string|null|---
-textInputKeyboardType|string|null|---
-textInputs|array|[{text: ""}]|Initial array of inputs. It should be in format {text: "Your input"}
-onAdd|function|() => {}|Function invoked when a input was added
-onRemove|function|(index) => {}|Function invoked when a input has been removed. The callback function comes with index parameter
-onChangeText|function|(input, index) => {}|Function invoked on some input change text. The callback function comes with input and index parameters
-maxTextInput|int|3|---
-inputStyle|object|{}|---
+|autoCapitalize|string|none||
+|textInputPlaceholder|string|null||
+|textInputKeyboardType|string|null||
+|textInputs|array|[{text: ""}]|Initial array of inputs. It should be in format {text: "Your input"}|
+|onAdd|function|() => {}|Function invoked when a input was added|
+|onRemove|function|(index) => {}|Function invoked when a input has been removed. The callback function comes with index parameter|
+|onChangeText|function|(input, index) => {}|Function invoked on some input change text. The callback function comes with input and index parameters|
+|maxTextInput|int|3||
+|inputStyle|object|{}||
+|addIcon|element|Add Icon Image||
+|removeIcon|element|Remove Icon Image||
+|enableAddButton|bool|true|Enable user to add new inputs. If not reached the maxTextInput value| 
 ---
 

@@ -1,9 +1,9 @@
-import React from 'react';
 import { TouchableOpacity, StyleSheet, TextInput, View, Platform, Image } from 'react-native';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const defaultImageAdd = require('./assets/add.png');
-const defaultImageRemove = require('./assets/remove.png');
+const defaultImageRemove = require('./assets/clear.png');
 
 class MultipleTextInput extends React.Component {
 
@@ -97,7 +97,7 @@ class MultipleTextInput extends React.Component {
             textInputs: this.state.textInputs.filter((s, sidx) => idx !== sidx)
         }, () => {
             if (this.props.onRemove instanceof Function) {
-                this.props.onRemove(this.state.textInputs[idx], idx);
+                this.props.onRemove(idx);
             }
         });
     };
@@ -146,28 +146,26 @@ class MultipleTextInput extends React.Component {
     };
 };
 
-const getDefaultAddIcon = () => {
-    return (
-        <Image
-            style={styles.imageAction}
-            source={defaultImageAdd}
-        />
-    );
-}
-
-const getDefaultRemoveIcon = () => {
-    return (
-        <Image
-            style={styles.imageAction}
-            source={defaultImageRemove}
-        />
-    );
-}
-
 MultipleTextInput.defaultProps = {
     enableAddButton: true,
-    addIcon: getDefaultAddIcon(),
-    removeIcon: getDefaultRemoveIcon(),
+    addIcon: (
+        <Image
+            style={{
+                height: 25,
+                width: 25,
+            }}
+            source={defaultImageAdd}
+        />
+    ),
+    removeIcon: (
+        <Image
+            style={{
+                height: 25,
+                width: 25,
+            }}
+            source={defaultImageRemove}
+        />
+    ),
     textInputPlaceholder: '',
     textInputKeyboardType: 'default',
     maxTextInput: 3,
@@ -206,7 +204,7 @@ const styles = StyleSheet.create({
     containerAddButton: {
         height: 25,
         width: 25,
-        backgroundColor: global.COLOR_MAIN,
+        backgroundColor: "black",
         alignSelf: 'flex-end',
         marginVertical: 5
     },
@@ -215,10 +213,6 @@ const styles = StyleSheet.create({
         marginVertical: 4
     },
     inputStyle: {
-        flex: 1
-    },
-    imageAction: {
-        height: 25,
-        width: 25,
+        width: 200
     }
 });

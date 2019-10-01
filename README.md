@@ -31,7 +31,7 @@ import MultipleTextInput from 'react-native-input-clonable';
   inputStyle={{ fontSize: 14, width: 190 }}
 />
 ```
-Props
+## Props
 
 ---
 |prop|type|default|obs|
